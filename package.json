@@ -1,0 +1,45 @@
+{
+	"name": "ously-cli",
+	"version": "0.0.0",
+	"description": "Personal financial planning tools designed for AI agents",
+	"type": "module",
+	"license": "MIT",
+	"engines": {
+		"node": ">=22"
+	},
+	"bin": {
+		"ously": "./bin/ously.mjs"
+	},
+	"files": [
+		"dist",
+		"bin",
+		"README.md",
+		"LICENSE"
+	],
+	"scripts": {
+		"build": "tsup",
+		"dev": "tsup --watch",
+		"start": "node bin/ously.mjs",
+		"lint": "biome check .",
+		"format": "biome format --write .",
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"bench": "node scripts/bench.mjs",
+		"changeset": "changeset",
+		"version": "changeset version",
+		"release": "pnpm build && changeset publish"
+	},
+	"dependencies": {
+		"citty": "0.2.2",
+		"valibot": "1.4.2"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.5.2",
+		"@changesets/cli": "2.31.0",
+		"@types/node": "^22.20.0",
+		"tsup": "8.5.1",
+		"typescript": "6.0.3",
+		"vitest": "4.1.9"
+	}
+}

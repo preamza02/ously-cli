@@ -1,0 +1,23 @@
+node_modules/
+dist/
+coverage/
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# Build artifacts
+*.tsbuildinfo
+.turbo/
+.tmp/
+
+# OS
+Thumbs.db
+
+# Bun
+bun.lockb
